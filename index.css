@@ -217,17 +217,24 @@ a{
 }
 
 .sobre-img{
-    margin-top: 98px;
-    margin-left: 104px;   
+    /* margin-top: 98px; */
+    margin-left: 24px;
+    height: 600px;
 }
 
 .sobre-conteudo{
      display: flex;
+     max-width: 1300px;
+     gap:120px;
+     margin: 0 auto;
+     background-color: red;
 }
+
+
 
 .sobre-title{
     margin-top: 98px;
-    margin-left: 203px;    /* 396px */
+    /* padding-left: 203px;  */
 }
 
 .sobre-title h3{
@@ -267,7 +274,6 @@ a{
     font-weight: 600;
     font-size: 32px;
     line-height: 48px;
-    margin-bottom: 117px;
 }
 
 /* Equipe */
@@ -308,15 +314,17 @@ a{
 }
 
 .container-contato{
+    max-width: 1200px;
     display: flex;
     justify-content: space-around;
     text-align: center;
+    margin: 0 auto;
 }
 
 .contato-icon{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     margin-bottom: 50px;
 }
 
@@ -342,6 +350,14 @@ a{
 .container-parceiros{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.container-parceiros img{
+    width: 130px;
     margin-bottom: 50px;
 }
 
@@ -355,6 +371,8 @@ a{
     display: flex;
     flex-direction: column;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .container-localizacao h2{
@@ -368,21 +386,16 @@ a{
 
 .container-localizacao h4{
     color: var(--branco);
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 50px;
+    font-weight: lighter;
+    line-height: normal;
 }
 
-.container-localizacao h6{
-    color: var(--branco);
-    font-size: 20px;
-    margin-bottom: 50px;
-    font-weight: 300;
-}
 
 iframe{
-    width: 80vw;
-    height: 80vh;
+    width: 50vw;
+    /* height: 80vh; */
     margin-bottom: 50px;
     border-radius: 8px;
 }
@@ -400,4 +413,49 @@ footer{
     margin: 0 auto;
     text-align: center;
     align-items: center;
+}
+
+/* Media */
+@media(max-width:480px){
+    /* header */
+
+    .logo{
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    nav{
+        display: none;
+    }
+
+    /* Contato */
+    .container-parceiros{
+        max-width: 430px;
+        gap: 10px;
+    }
+
+    .container-contato{
+        max-width: 430px;
+    }
+
+    .contato-icon{
+        gap: 2px;
+    }
+
+    .contato-icon p{
+        font-size: 10px;
+    }
+
+    .contato-icon img{
+        width: 30px;
+    }
+
+     /* Localização */
+    iframe{
+        height: 35vh;
+        width: 90vw;
+        /* height: 80vh; */
+        /* margin-bottom: 50px; */
+        /* border-radius: 8px; */
+    }
 }
